@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="spring-services-versioning"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <requiredProperties>
+        <requiredProperty key="packaging">
+            <defaultValue>war</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="appKey">
+            <defaultValue>SPL</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="appName">
+            <defaultValue>Sample</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="contextPath">
+            <defaultValue>/sample</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="serverPort">
+            <defaultValue>8080</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="databaseName">
+            <defaultValue>spl</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="collectionName">
+            <defaultValue>foo</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>*.md</include>
+                <include>*.sh</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>_database</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.properties</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
