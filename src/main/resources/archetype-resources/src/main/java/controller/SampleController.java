@@ -41,7 +41,7 @@ public class SampleController {
 	 * @return a JSON object
 	 */
 	@RequestMapping(value = "/check", method = RequestMethod.GET)
-	public ResponseDTO<Map> check() {
-		return new ResponseDTO<Map>(this.appKey, this.sampleService.check());
+	public ResponseDTO<IdentityDTO> check() {
+		return new ResponseDTO<IdentityDTO>(this.appKey, this.sampleService.check());
 	}
 }
