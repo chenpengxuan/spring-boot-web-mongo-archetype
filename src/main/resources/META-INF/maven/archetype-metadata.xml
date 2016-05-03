@@ -7,7 +7,7 @@
 
     <requiredProperties>
         <requiredProperty key="packaging">
-            <defaultValue>war</defaultValue>
+            <defaultValue>jar</defaultValue>
         </requiredProperty>
         <requiredProperty key="appKey">
             <defaultValue>SPL</defaultValue>
